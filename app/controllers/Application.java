@@ -33,17 +33,18 @@ public class Application extends Controller {
 
 
         LocalDate birthdate = new LocalDate(age);
-
-
-
-
+        
+        DateTimeFormatter fmt = DateTimeFormat.forPattern("d MMMM, yyyy");
+        
+        String str = birthdate.toString(fmt);
+        
         LocalDate now = new LocalDate();
         Period period = new Period(birthdate, now, PeriodType.yearMonthDay() );
         int iAge = period.getYears();
 
 
 
-        render(name, age, iAge);
+        render(name, age, iAge, str);
 
 
     }
