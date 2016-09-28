@@ -1,0 +1,12 @@
+#{ifErrors}
+<h1>Oops…</h1>
+#{/ifErrors}
+
+
+<form action="@{Application.hello()}" method="POST">
+    <input type="text" name="name" /><br><br>
+    <input type="date" name="age" /><br><br>
+
+    <input type="submit" value="SUBMIT!" />
+</form>
+
